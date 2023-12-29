@@ -1,0 +1,21 @@
+using System;
+class Programm
+{
+    static void Main()
+    {
+        int[] arr = { 1, 2, 3, 4, 5 };
+        ArrIterator(arr, arr.Length-1);
+
+    }
+    static void ArrIterator(int[] arr, int index)
+    {
+        if (arr.Length == 0)
+            return;
+
+        Console.WriteLine(arr[index]);
+        index--;
+        if (index < 0)
+            return;
+        ArrIterator(arr, index);
+    }
+}
